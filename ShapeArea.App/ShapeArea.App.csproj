@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2FE9F4BD-E636-4EE7-84DE-1859ED47E4BC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Tech.ShapeArea.App</RootNamespace>
+    <AssemblyName>Tech.ShapeArea.App</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShapeArea.CoreShapes\ShapeArea.CoreShapes.csproj">
+      <Project>{28cc2830-04e9-4f13-bca0-5717dc0a2cda}</Project>
+      <Name>ShapeArea.CoreShapes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShapeArea.Core\ShapeArea.Core.csproj">
+      <Project>{dd94625d-018c-4109-b604-a1cf4767d424}</Project>
+      <Name>ShapeArea.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShapeArea.ViewShapes\ShapeArea.ViewShapes.csproj">
+      <Project>{c631d41b-9046-4129-95ec-92ca79d9e824}</Project>
+      <Name>ShapeArea.ViewShapes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShapeArea.View\ShapeArea.View.csproj">
+      <Project>{d85d9a9f-2bb7-45bc-9608-023865e5addc}</Project>
+      <Name>ShapeArea.View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor">
+      <Version>4.1.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

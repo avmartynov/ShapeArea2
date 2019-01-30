@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tech.ShapeArea.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Tech.ShapeArea.Core.IShape">
+            <summary>
+            Интерфейс произвольной геометрической фигуры
+            </summary>
+        </member>
+        <member name="M:Tech.ShapeArea.Core.IShape.CalculateArea">
+            <summary>
+            Вычисляет площадь фигуры
+            </summary>
+        </member>
+        <member name="T:Tech.ShapeArea.Core.IShapeFactory">
+            <summary>
+            Интерфейс фабрики, производящей геометрическую фигуру. 
+            </summary>
+        </member>
+        <member name="M:Tech.ShapeArea.Core.IShapeFactory.CreateShape(System.Object[])">
+            <summary>
+            Создаёт геометрическую фигуру определённого типа и инициализирует её заданными параметрами.
+            </summary>
+        </member>
+    </members>
+</doc>
